@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <a class="waves-effect waves-light btn" onclick="clonaAnArr()">
+                <i class="material-icons right">cloud</i>
+                Clonar
+        </a>
+        <p id="clonar"></p>
+        <p id="clonarDos"></p>
+    </div>
+
+
+    <script>
+        
+        function clonaAnArr(){
+            const alpha = ['A','B','C'];
+            /* Forma 1 de clonar */
+            const clonacionUno = alpha.slice(); /*  ['A','B','C'] */
+            document.getElementById("clonar").innerHTML = "Clonación uno "+ clonacionUno;
+            document.getElementById("clonarDos").innerHTML = "Clonación dos "+ [...alpha];
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Arrays: foreach() 
+        map()
+        split()
+        {...} spred
+        while -> desconocemos la cantidad exacta de iteraciones
+Objetos: {clave: valor}
+        Object.values()
+        Object.key() 
+        Object.getOwnPropertyNames()
+        Object.entries([clave1: valor1], [clave2, valor2])

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Objectos se declaran con {clave: valor} 
+            Declaración de un objeto*/
+            const datosPersonalesObj = {
+                lenguaje: 'Javascript',
+                app: 'Android',
+                api: 'apiNews'
+            };
+            /* Declaración de un array */
+            const datosPersonalesArr = ['Js','Android','apiNews'];
+
+            Object.keys(datosPersonalesObj); /* ['lenguaje','app','api'] */
+            Object.values(datosPersonalesObj); /* ['Javascript','Android','apiNews'] */
+            Object.entries(datosPersonalesObj); /* [['lenguaje','Javascript'],
+                                                    ['app', 'Android'],
+                                                    ['api', 'apiNews']] */
+            console.log("Obtener un array con clave y valor " + "\n" + 
+                        Object.entries(datosPersonalesObj));
+    </script>
+</body>
+</html>

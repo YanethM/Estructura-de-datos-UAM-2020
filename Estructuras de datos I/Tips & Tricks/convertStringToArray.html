@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String To Array</title>
+</head>
+<body>
+    <script>
+        /* Declaración del objeto iterable */
+        let cadenaTexto = 'travel';
+        /* 
+            Salida esperada: ['t','r','a','v','e','l'] 
+            Pilas array se declara con []
+        */
+        cadenaTexto.split(''); 
+        console.log('Verificar método split: ' + cadenaTexto.split(''));
+
+        [...cadenaTexto];/* EcmaScript6 spread operator*/
+        console.log('Verificar spread operator ' + [...cadenaTexto]);
+
+        Array.from(cadenaTexto);
+        console.log('Verificar método from: ' + Array.from(cadenaTexto));
+
+        Object.assign([],cadenaTexto);
+        console.log(Object.assign([],cadenaTexto));
+
+        /* Invertir una cadena de texto */
+        let invertirCadena = cadenaTexto.split('').reverse('').join();
+        /*  H O L A split
+            A L O H reverse
+            ALOH join */
+        console.log("Cadena invertida " + invertirCadena);
+    </script>
+</body>
+</html>

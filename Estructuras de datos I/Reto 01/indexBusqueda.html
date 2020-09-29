@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+
+    <!-- Hola -->
+    <div class="container">
+        <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-fiel col s6">
+                            <label for="nombreUser">Nombre</label>
+                            <input type="text" class="validate" name="nombreUser" id="nombreUser" placeholder="Nombre">
+                        </div>
+
+                        <div class="input-fiel col s6">
+                            <label for="apellidoUser">Apellido</label>
+                            <input type="text" class="validate" id="apellidoUser" placeholder="Apellidos">
+                        </div>
+                        
+                        <div class="input-fiel col s6">
+                            <label for="edad">Edad</label>
+                            <input type="number" class="validate" id="edad" placeholder="Edad">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-fiel col s12">
+                            <input disabled value="No se encuentra disponible la edición" id="inhabilitado" 
+                                type="text" class="validate">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-fiel col s12">
+                            <label for="contrasena">Contraseña</label>
+                            <input id="contrasena" type="password" class="validate">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-fiel col s12">
+                            <label for="correo" class="active">Correo electrónico</label>
+                            <input id="correo" type="email" class="validate">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-fiel col s12">
+                                    <label for="contenido">Comentarios</label>
+                                    <textarea id="contenido" class="materialize-textarea"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <label>Browser Select</label>
+                    <select class="browser-default" id="listaAlgOrdenamiento">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Burbuja</option>
+                        <option value="2">Selección</option>
+                        <option value="3">Inserción</option>
+                    </select>
+                    <button class="btn waves-effect waves-light" onclick="capturarValores()">
+                        Submit
+                        <i class="material-icons right">send</i>
+                      </button>
+                      <p id="verEdad"></p>
+                      <p id="verSeleccionListaD"></p>
+                </form>
+        </div>
+    </div>
+    <script src="js/algortimosOrdenamiento.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>
