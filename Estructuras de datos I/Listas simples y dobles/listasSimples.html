@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="panel blue darken-4">
+            <div class="nav-wrapper">
+                <a href="" class="brand-logo">
+                    <img class="responsive-img" width="150" height="auto" src="img/Manizales.png">
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="listasSimples.html">Listas simples</a></li>
+                    <li><a href="listasDobles.html">Listas dobles</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <h5>Listas simplemente enlazadas</h5>
+        </div>
+
+        <!-- Texto plano con preguntas -->
+        <div class="row">
+            <div class="col s6">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">code</i>
+                        <input type="text" id="valorL" class="autocomplete">
+                        <label for="valorL">Valores lista</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón y lista inicial -->
+        <div class="row">
+            <div class="col s3">
+                <button class="btn waves-light" type="submit" name="action" onclick="listaSimpleInicial()">
+                    Ver
+                    <i class="material-icons right">send</i>
+            </div>
+            <div class="col s3">
+                <label>Los valores ingresados son: </label>
+            </div>
+            <div class="col s6">
+                <p id="valoresA"></p>
+            </div>
+        </div>
+
+         <!-- GRID
+        Lista desplegable -->
+         <div class="row">
+            <div class="col s5">
+                <label>Seleccione una función para editar la lista</label>
+            </div>
+            <div class="col s7">
+                <select class="browser-default" id="funcionListaSimple">
+                    <option value="" disabled selected>Funciones disponibles</option>
+                    <option value="1">Añadir al inicio de la lista</option>
+                    <option value="2">Añadir al final de la lista</option>
+                    <option value="3">Eliminar al inicio de la lista</option>
+                    <option value="4">Eliminar al final de la lista</option>
+                    <option value="5">Modificar valor de determinado nodo</option>
+                    <option value="6">Eliminar nodo por determinada posición</option>
+                    <option value="7">Insertar nodo por determinada posición</option>
+                </select>
+            </div>
+        </div>
+        <!-- Texto plano con preguntas -->
+        <div class="row">
+            <div class="col s6">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">code</i>
+                        <input type="text" id="valorN" class="autocomplete" disabled="disabled">
+                        <label for="valorN">Valor</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">code</i>
+                        <input type="text" id="posicionL" class="autocomplete" disabled="disabled">
+                        <label for="posicionL">Posición si se requiere</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s3">
+                <a class="btn-floating btn-large waves-effect waves-light red" onclick="listaSimpleInicial()">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>
+                <div class="col s3">
+                    <label>Los valores ingresados son: </label>
+                </div>
+                <div class="col s6">
+                    <p id="valoresP"></p>
+                </div>
+        </div>
+    </div>
+
+    <script src="js/listasSimples.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#funcionListaSimple').change(function(e) {
+                if (($(this).val() === "1") || ($(this).val() === "2")) {
+                    $('#valorN').prop("disabled", false);
+                    $('#posicionL').prop("disabled", true);
+                }else if(($(this).val() === "3")||($(this).val() === "4")){
+                    $('#valorN').prop("disabled", true);
+                    $('#posicionL').prop("disabled", true);
+                }else if (($(this).val() === "5")||($(this).val() === "7")){
+                    $('#valorN').prop("disabled", false);
+                    $('#posicionL').prop("disabled", false);
+                }else{
+                    $('#valorN').prop("disabled", true);
+                    $('#posicionL').prop("disabled", false);
+                }
+            })
+        });
+    </script>
+
+</body>
+
+</html>
