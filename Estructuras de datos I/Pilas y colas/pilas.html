@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pilas.html">Pilas</a></li>
+                    <li><a href="colas.html">Colas</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h5>Pilas</h5>
+        <div class="row">
+            <div class="col s4">
+                <strong>TAD LIFO</strong>
+                <hr>
+                <label for="name">
+                    LIFO: Lats In First Out
+                </label>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <br>
+
+
+        <table class="striped highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Caracteristica</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        Descripción
+                    </td>
+                    <td>
+                        Las pilas son una TAD que almacena datos de forma
+                        <strong>lineal y unidireccional</strong>
+                        <br> Los elementos se agregan en un orden y en una sola dirección
+                        <strong>
+                            <em>de inicio a fin.</em>
+                        </strong>
+                        <br> Siempre el último elemento agregado es el primero en salir.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Historial del navegador web</td>
+                    <td>Cada página nueva que se visita se situa encima de la anterior, en el historial de búsqueda. Generando una pila de registros.</td>
+
+                </tr>
+                <tr>
+                    <td>Listar información cronológica del más al menos reciente</td>
+                    <td>Listar noticias de Instagram, facebook, twitter, todas las redes sociales.</td>
+
+                </tr>
+                <tr>
+                    <td>Complejidad en cuanto a tiempo y espacio</td>
+                    <td>La complejidad la determina el tipo de implementación si se utiliza un array o objeto</td>
+
+                </tr>
+                <tr>
+                    <td>Complejidad tiempo array</td>
+                    <td>Acceso: O(1)
+                        <br> Búsqueda: O(n)
+                        <br> Inserción: O(n)
+                        <br> Eliminación: O(n)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Complejidad tiempo objeto</td>
+                    <td>Acceso: O(n)
+                        <br> Búsqueda: O(n)
+                        <br> Inserción: O(1)
+                        <br> Eliminación: O(1)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Métodos de las pilas</td>
+                    <td><strong>Push:</strong> Agregar nuevo valor a la pila, ubicandolo al final de ésta.
+                        <br> <strong>Pop:</strong> Retorna el último valor ingresado a la pila, eliminandolo de ésta.
+                        <br> <strong>Peek:</strong> Retorna el último valor ingresado a la pila, sin eliminarlo.
+                        <br> <strong>Size:</strong> Retorna el número de elementos que contiene la pila
+                        <br> <strong>Print:</strong> Muestra el contenido de la pila.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="js/pilas.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+
+</html>
