@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pilas.html">Pilas</a></li>
+                    <li><a href="colas.html">Colas</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h5>Colas</h5>
+        <div class="row">
+            <div class="col s4">
+                <strong>TAD FIFO</strong>
+                <hr>
+                <label for="name">
+                    LIFO: First In, First Out
+                </label>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <br>
+
+        <table class="striped highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Caracteristica</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        Ejemplos de uso
+                    </td>
+                    <td>
+                        1. Orden de operaciones
+                        <br> 2. Cola de impresión
+                        <br> 3. Fila para ingresar a bancos
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Métodos
+                    </td>
+                    <td>
+                        <strong>Enqueue o encolar: </strong>Agregar elemento a la cola
+                        <br>
+                        <strong>Dequeue o desencolar: </strong>Retirar el primer elemento de la cola
+                        <br>
+                        <strong>isEmpty: </strong>Indica si la cola esta vacía
+                        <br>
+                        <strong>front: </strong>Identificar el primer elemento agregado a la cola, sin retirarlo
+                        <br>
+                        <strong>back: </strong>Identificar el último elemento de la cola, sin retirarlo
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <input type="text" id="user-name" placeholder="Ingrese un nombre">
+            <button id="add-user">Añadir usuario a la cola</button>
+            <button id="attend-user">Atender usuario</button>
+        </div>
+        <div>
+            <div id="nodoactual-user"></div>
+            <div id="queue"></div>
+        </div>
+
+        <script src="js/colas.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+
+</html>
